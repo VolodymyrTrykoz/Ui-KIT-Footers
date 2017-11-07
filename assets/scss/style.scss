@@ -1,0 +1,102 @@
+
+//Google fonts font-family: 'Cabin', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import 'icons/iconfont__variables';
+@import 'icons/iconfont__icons';
+@import 'base/normalize';
+
+
+
+ 
+
+// Base Style
+
+@import "base/_variables";
+@import "base/placeholders";
+@import "base/_bootstrap-grid"; // bootstrap v4 grid
+
+
+
+
+
+
+
+
+html {
+  font-size: 62.5%;
+  font-family: $primary_font;
+}
+
+
+ 
+
+ .footer-bg {
+    background: $footer-bg;
+ }
+
+ .container {
+    @extend %container; 
+ }
+ 
+
+ .padtop5bot45 {
+  padding: 5rem 0 4.5rem 0;
+ }
+
+ .padleft4 {
+  padding-left: 4rem;
+ }
+
+
+.flex-hor-vert-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+  .flex-align-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  ul {
+    list-style: none;
+  }
+
+  a {text-decoration: none;}
+
+
+  .contact__item {
+    padding: 10px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .flex-betw {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon {
+    position: relative;
+  }
+
+  //small amendments for better svg reflection
+  .icon--fb:before,.icon--ggl:before, .icon--tw:before {
+     position: absolute;
+     top: 5px;
+     width: 2px;
+  }
+
+  .nav__item, .footer__address {
+    font-size: $font-size-base;
+    font-weight: bold;
+  }
+
+
+  .item__link {
+     
+  }
