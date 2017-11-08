@@ -17,14 +17,14 @@ $global-font-icon: 'social';
     /* Some common icon stuff */
   }
 
+  &.icon--drbbbl {
+    &:before {
+      content: $icon-drbbbl;
+    }
+  }
   &.icon--fb {
     &:before {
       content: $icon-fb;
-    }
-  }
-  &.icon--ffacebook {
-    &:before {
-      content: $icon-ffacebook;
     }
   }
   &.icon--ggl {
@@ -32,14 +32,9 @@ $global-font-icon: 'social';
       content: $icon-ggl;
     }
   }
-  &.icon--ggoogle {
+  &.icon--lkin {
     &:before {
-      content: $icon-ggoogle;
-    }
-  }
-  &.icon--ttwitter {
-    &:before {
-      content: $icon-ttwitter;
+      content: $icon-lkin;
     }
   }
   &.icon--tw {

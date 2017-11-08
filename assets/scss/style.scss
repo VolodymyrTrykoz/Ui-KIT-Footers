@@ -31,21 +31,106 @@ html {
  
 
  .footer-bg {
-    background: $footer-bg;
+   background: $footer-bg;
  }
 
  .container {
-    @extend %container; 
+   @extend %container; 
  }
- 
+
+ .pad-top-bot35 {
+  padding: 3.5rem 0;
+ }
+
+ .pad-top35-bot9 {
+  padding: 3.5rem 0 9rem 0;
+
+ }
+
+ .pad-top1-bot4 {
+  padding-top: 1rem;
+  padding-bottom: 4rem
+ }
 
  .padtop5bot45 {
   padding: 5rem 0 4.5rem 0;
  }
 
+ .pad0405 {
+  padding: 0.4em 0.5em;
+ }
+
+    
+ .pad-bl-05-b {
+  display: block;
+  padding-bottom: 0.5em;
+ }
+
+ .pad-bl-1-b {
+  display: block;
+  padding-bottom: 1em;
+ }
+
+ .pad-bl-t1-b05 {
+  display: block;
+  padding-top:1em;
+  padding-bottom: 0.5em;
+ }
+
+ .pad-bl-050 {
+  display: block;
+  padding: 0.5em 0;
+ }
+
+
  .padleft4 {
   padding-left: 4rem;
  }
+
+
+ .martop1 {
+  margin-top: 1rem;
+ }
+
+ .marleft3 {
+  margin-left: 3rem;
+ }
+
+ .marright1 {
+  margin-right: 1rem;
+ }
+
+ .marright9 {
+  margin-right: 9rem;
+ }
+
+
+
+ .marbot5 {
+  margin-bottom: 5rem;
+ }
+
+ .dark {
+  color: $dark;
+      &-bg {
+        background: $dark;
+      }
+
+ }
+
+ .gray {
+  @extend %transition;
+  color: $gray-mid-col;
+    &--link:hover {
+      color: $blue;
+    }
+ }
+
+ .white {
+  color: #fff;
+ }
+
+
 
 
 .flex-hor-vert-center {
@@ -53,7 +138,7 @@ html {
   justify-content: center;
   align-items: center;}
 
-  .flex-align-center {
+.flex-align-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +146,7 @@ html {
 
   ul {
     list-style: none;
+    padding: 0;
   }
 
   a {text-decoration: none;}
@@ -70,33 +156,171 @@ html {
     padding: 10px;
   }
 
-  .flex {
+  .borrad05, %borrad05 {
+  border-radius: 0.5rem;
+}
+
+  .flex-ai-c {
     display: flex;
     align-items: center;
+  }
+
+  .flex {
+    display: flex;
   }
 
   .flex-betw {
     display: flex;
     justify-content: space-between;
   }
-
+  
   .icon {
-    position: relative;
-  }
+    font-size: 1.2rem;
+    padding: 0.5em;
 
-  //small amendments for better svg reflection
-  .icon--fb:before,.icon--ggl:before, .icon--tw:before {
-     position: absolute;
-     top: 5px;
-     width: 2px;
+        &--vert-align {
+          vertical-align: middle;
+          padding-right: 1rem;
+        }
   }
 
   .nav__item, .footer__address {
     font-size: $font-size-base;
-    font-weight: bold;
+    
   }
 
 
   .item__link {
-     
+  @extend %transition; 
+     &:hover {
+      color: $blue;
+     }
   }
+
+//--------------second footer-----------------//
+
+  .social-bg {
+    margin-right: 0.5rem;
+      &--fb {
+        background: #3162a2;
+      }
+      &--tw {
+        background: #2eb1eb;
+      }
+      &--drbb {
+        background: #f552b6;
+      }
+      &--in {
+        background: #457ac0;
+      }
+  }
+
+
+
+  .social__numb {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .icon--lkin {
+    position: relative;
+    top: -2px;
+}
+
+.btn--scl {
+  font-size: $font-size-secondary;
+        &:hover {
+        opacity: 0.8;
+        }
+}
+
+.footer__heading {
+  margin-top: 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.footer__descr {
+  @extend %font-base;
+}
+
+.footer__support {
+ @extend %font-base;
+ @extend %transition;
+ color: $blue;
+       &:hover {
+        color: #97c5dd;
+       }   
+
+}
+
+
+
+//-------------third footer--------------//
+
+
+.block__link {
+  margin: 0;
+
+}
+
+.link__copiright {
+        &--lg {
+          font-size: $font-size-base;
+          font-weight: bold;
+        }
+}
+
+
+.width65 {
+  width: 65%;
+}
+
+
+//-------------footer address-------------//
+
+
+.footer__address {
+  font-size: $font-size-base;
+          &--mar-t0 {
+            margin-top: 0;
+          }
+          &--mar-b0 {
+            margin-bottom: 0;
+          }
+
+}
+
+.footer__info {
+  width: 30%;
+}
+
+
+.info__text {
+  letter-spacing: 1px;
+}
+
+
+
+.btn, %btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-sm {
+  font-size: 1.4rem;
+  padding: 0.6em 2.2em;
+}
+
+
+.btn--green {
+  background: #24aa98;
+    &:hover {
+    background:  #1a9385;
+    }
+    &:active {
+    background:  #42c7b7;
+    }
+}

@@ -11,18 +11,16 @@
   font-family: "social"; }
   .icon:before {
     /* Some common icon stuff */ }
-  .icon.icon--fb:before {
+  .icon.icon--drbbbl:before {
     content: ""; }
-  .icon.icon--ffacebook:before {
+  .icon.icon--fb:before {
     content: ""; }
   .icon.icon--ggl:before {
     content: ""; }
-  .icon.icon--ggoogle:before {
+  .icon.icon--lkin:before {
     content: ""; }
-  .icon.icon--ttwitter:before {
-    content: ""; }
   .icon.icon--tw:before {
-    content: ""; }
+    content: ""; }
 
 /* ==========================================================================
    Normalize.scss settings
@@ -404,6 +402,14 @@ th {
 .container {
   widows: 94rem;
   margin: 0 auto; }
+
+.gray, .item__link, .footer__support {
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear; }
+
+.footer__descr, .footer__support {
+  font-size: 1.6rem; }
 
 .container {
   position: relative;
@@ -1947,11 +1953,69 @@ html {
 .footer-bg {
   background: #f2f5f8; }
 
+.pad-top-bot35 {
+  padding: 3.5rem 0; }
+
+.pad-top35-bot9 {
+  padding: 3.5rem 0 9rem 0; }
+
+.pad-top1-bot4 {
+  padding-top: 1rem;
+  padding-bottom: 4rem; }
+
 .padtop5bot45 {
   padding: 5rem 0 4.5rem 0; }
 
+.pad0405 {
+  padding: 0.4em 0.5em; }
+
+.pad-bl-05-b {
+  display: block;
+  padding-bottom: 0.5em; }
+
+.pad-bl-1-b {
+  display: block;
+  padding-bottom: 1em; }
+
+.pad-bl-t1-b05 {
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 0.5em; }
+
+.pad-bl-050 {
+  display: block;
+  padding: 0.5em 0; }
+
 .padleft4 {
   padding-left: 4rem; }
+
+.martop1 {
+  margin-top: 1rem; }
+
+.marleft3 {
+  margin-left: 3rem; }
+
+.marright1 {
+  margin-right: 1rem; }
+
+.marright9 {
+  margin-right: 9rem; }
+
+.marbot5 {
+  margin-bottom: 5rem; }
+
+.dark {
+  color: #383737; }
+  .dark-bg {
+    background: #383737; }
+
+.gray {
+  color: #b4bbc2; }
+  .gray--link:hover {
+    color: #65abd0; }
+
+.white {
+  color: #fff; }
 
 .flex-hor-vert-center {
   display: -webkit-box;
@@ -1976,7 +2040,8 @@ html {
           align-items: center; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
 
 a {
   text-decoration: none; }
@@ -1984,13 +2049,21 @@ a {
 .contact__item {
   padding: 10px; }
 
-.flex {
+.borrad05 {
+  border-radius: 0.5rem; }
+
+.flex-ai-c {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .flex-betw {
   display: -webkit-box;
@@ -2001,15 +2074,90 @@ a {
           justify-content: space-between; }
 
 .icon {
-  position: relative; }
-
-.icon--fb:before, .icon--ggl:before, .icon--tw:before {
-  position: absolute;
-  top: 5px;
-  width: 2px; }
+  font-size: 1.2rem;
+  padding: 0.5em; }
+  .icon--vert-align {
+    vertical-align: middle;
+    padding-right: 1rem; }
 
 .nav__item, .footer__address {
+  font-size: 1.6rem; }
+
+.item__link:hover {
+  color: #65abd0; }
+
+.social-bg {
+  margin-right: 0.5rem; }
+  .social-bg--fb {
+    background: #3162a2; }
+  .social-bg--tw {
+    background: #2eb1eb; }
+  .social-bg--drbb {
+    background: #f552b6; }
+  .social-bg--in {
+    background: #457ac0; }
+
+.social__numb {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold; }
+
+.icon--lkin {
+  position: relative;
+  top: -2px; }
+
+.btn--scl {
+  font-size: 1.4rem; }
+  .btn--scl:hover {
+    opacity: 0.8; }
+
+.footer__heading {
+  margin-top: 0;
+  font-size: 2.4rem;
+  font-weight: 500; }
+
+.footer__support {
+  color: #65abd0; }
+  .footer__support:hover {
+    color: #97c5dd; }
+
+.block__link {
+  margin: 0; }
+
+.link__copiright--lg {
   font-size: 1.6rem;
   font-weight: bold; }
+
+.width65 {
+  width: 65%; }
+
+.footer__address {
+  font-size: 1.6rem; }
+  .footer__address--mar-t0 {
+    margin-top: 0; }
+  .footer__address--mar-b0 {
+    margin-bottom: 0; }
+
+.footer__info {
+  width: 30%; }
+
+.info__text {
+  letter-spacing: 1px; }
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none; }
+
+.btn-sm {
+  font-size: 1.4rem;
+  padding: 0.6em 2.2em; }
+
+.btn--green {
+  background: #24aa98; }
+  .btn--green:hover {
+    background: #1a9385; }
+  .btn--green:active {
+    background: #42c7b7; }
 
 /*# sourceMappingURL=style.css.map */

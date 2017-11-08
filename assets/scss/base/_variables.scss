@@ -5,7 +5,7 @@
 
 $inactive-placeholder: #b8bfc6;
 $active-placeholder:   #383737; 
-
+$dark: $active-placeholder;
 $valid: #24aa98;
 $invalid: #db7560;
 $disabled:  #dee2e7;
@@ -14,6 +14,7 @@ $blue: #65abd0;
 $notif-bg: #4c4b4b;
 $alarm: #d9c26c;
 $footer-bg: #f2f5f8; 
+$gray-mid-col: #b4bbc2;
 
 
 // Fonts
@@ -22,6 +23,7 @@ $primary_font: 'Cabin', sans-serif;
 $secondary_font: '';
 
 $font-size-base:            1.6rem;
+$font-size-secondary:       1.4rem;
 
 $time: 0.3s;
 
