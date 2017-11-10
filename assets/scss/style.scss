@@ -34,12 +34,20 @@ html {
    background: $footer-bg;
  }
 
+ .footer-bg-green {
+  background: $valid;
+ }
+
  .container {
    @extend %container; 
  }
 
  .pad-top-bot35 {
   padding: 3.5rem 0;
+ }
+
+ .pad-top-bot47 {
+  padding: 4.7rem 0;
  }
 
  .pad-top35-bot9 {
@@ -56,8 +64,12 @@ html {
   padding: 5rem 0 4.5rem 0;
  }
 
+ .padtop35bot25 {
+  padding: 3.5rem 0 2.5rem 0;
+ }
+
  .pad0405 {
-  padding: 0.4em 0.5em;
+  padding: 0.6em 0.9em;
  }
 
     
@@ -87,13 +99,48 @@ html {
   padding-left: 4rem;
  }
 
+ .padleft5 {
+  padding-left: 5rem;
+ }
+
+ .padleft-right15 {
+   padding: {
+    left: 1.5em;
+    right: 1.5em;
+   }
+ }
+
+
+  .martop0 {
+  margin-top: 0;
+}
 
  .martop1 {
   margin-top: 1rem;
  }
 
+  .marleft2 {
+  margin-left: 2rem;
+ }  
+
  .marleft3 {
   margin-left: 3rem;
+ }
+
+ .marleft5 {
+  margin-left: 5rem;
+ }
+
+ .marleft67 {
+  margin-left: 6.7rem;
+ }
+
+ .marleft8 {
+  margin-left: 8rem;
+ }
+
+ .marleft14 {
+  margin-left: 14rem;
  }
 
  .marright1 {
@@ -104,7 +151,9 @@ html {
   margin-right: 9rem;
  }
 
-
+  .marbot0 {
+  margin-bottom: 0;
+}
 
  .marbot5 {
   margin-bottom: 5rem;
@@ -116,6 +165,13 @@ html {
         background: $dark;
       }
 
+ }
+
+ .yellow {
+  color: $alarm;
+      &-bg:hover {
+        background: $alarm;
+      }
  }
 
  .gray {
@@ -130,7 +186,10 @@ html {
   color: #fff;
  }
 
-
+.flex-just-center, %flex-just-center {
+  display: flex;
+  justify-content: center;
+}
 
 
 .flex-hor-vert-center {
@@ -160,6 +219,8 @@ html {
   border-radius: 0.5rem;
 }
 
+
+
   .flex-ai-c {
     display: flex;
     align-items: center;
@@ -175,17 +236,28 @@ html {
   }
   
   .icon {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding: 0.5em;
 
         &--vert-align {
           vertical-align: middle;
           padding-right: 1rem;
         }
+
+        &--round {
+          @extend %bor-rad-50;
+          padding: 1em 1.2em;
+        }
   }
 
   .nav__item, .footer__address {
+    @extend %transition;
     font-size: $font-size-base;
+    font-weight: 600;
+
+          &--regul {
+            font-weight: 400;
+          }
     
   }
 
@@ -213,6 +285,13 @@ html {
       &--in {
         background: #457ac0;
       }
+      &--vmo {
+         background: #3498b9;
+      }
+      &--ggl {
+       background: #f25c58;
+     }
+
   }
 
 
@@ -283,13 +362,7 @@ html {
 
 .footer__address {
   font-size: $font-size-base;
-          &--mar-t0 {
-            margin-top: 0;
-          }
-          &--mar-b0 {
-            margin-bottom: 0;
-          }
-
+         
 }
 
 .footer__info {
@@ -304,14 +377,29 @@ html {
 
 
 .btn, %btn {
+  @extend %transition;
   cursor: pointer;
   border: none;
   outline: none;
 }
 
 .btn-sm {
-  font-size: 1.4rem;
-  padding: 0.6em 2.2em;
+  font-size: $font-size-base;
+  padding: 1em 2.2em;
+}
+
+
+.btn-sm--wider-side {
+  padding: {
+    left: 3.5em;
+    right: 3.5em;
+  }
+}
+
+
+.btn-xs {
+  font-size: $font-size-secondary;
+   padding: 1em 2.2em;
 }
 
 
@@ -323,4 +411,81 @@ html {
     &:active {
     background:  #42c7b7;
     }
+}
+
+
+//----------footer green form-----------//
+
+.form__p {
+  @extend %font-base;
+}
+
+
+.form__input {
+  position: relative;
+}
+
+.icon--envel {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 50%; 
+  left: 1.5em;
+  transform: translateY(-50%);
+  color: $alarm;    
+}
+
+.input__placehold {
+  @extend %font-base;
+  @extend %borrad05;
+      padding: {
+        top:1em;
+        bottom:1em;     
+      }
+  width: 32rem;  
+  outline: none;
+  border: none;  
+} 
+
+.input__placehold:focus + .icon--envel {
+  @extend %transition;
+  color: $blue;
+}
+
+.input__placehold:focus {
+  color: $blue;
+}
+
+
+.btn--yellow {
+  background: $alarm;
+    &:hover {
+    background:  #c7a834;
+    }
+    &:active {
+    background:  #ebd688;
+    }
+} 
+//----------footer with map----------//
+.btn--blue {
+  background-color: $blue;
+   &:hover {
+            background-color: $button-blue-hov;
+          }
+   &:active {
+            background-color: $button-blue-active;
+          }       
+}
+
+
+//----------dark-bg form-----------//
+
+.footer__copiright {
+
+}
+
+.copiright__text {
+   @extend %font-base;
+   &--grey {
+    color: #a3a3a3;
+   }
 }

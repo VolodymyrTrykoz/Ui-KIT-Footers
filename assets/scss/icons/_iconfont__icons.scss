@@ -22,6 +22,11 @@ $global-font-icon: 'social';
       content: $icon-drbbbl;
     }
   }
+  &.icon--envel {
+    &:before {
+      content: $icon-envel;
+    }
+  }
   &.icon--fb {
     &:before {
       content: $icon-fb;
@@ -40,6 +45,11 @@ $global-font-icon: 'social';
   &.icon--tw {
     &:before {
       content: $icon-tw;
+    }
+  }
+  &.icon--vmo {
+    &:before {
+      content: $icon-vmo;
     }
   }
 
