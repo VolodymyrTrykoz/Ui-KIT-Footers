@@ -27,7 +27,9 @@ html {
   font-family: $primary_font;
 }
 
-
+.uppercase {
+  text-transform: uppercase;
+}
  
 
  .footer-bg {
@@ -60,12 +62,17 @@ html {
   padding-bottom: 4rem
  }
 
+
+ .padtop35bot25 {
+  padding: 3.5rem 0 2.5rem 0;
+ }
+
  .padtop5bot45 {
   padding: 5rem 0 4.5rem 0;
  }
 
- .padtop35bot25 {
-  padding: 3.5rem 0 2.5rem 0;
+ .padtop8bot4 {
+  padding: 8rem 0 4rem 0;
  }
 
  .pad0405 {
@@ -80,6 +87,7 @@ html {
 
  .pad-bl-1-b {
   display: block;
+  padding-top: 0;
   padding-bottom: 1em;
  }
 
@@ -92,6 +100,10 @@ html {
  .pad-bl-050 {
   display: block;
   padding: 0.5em 0;
+ }
+
+.padleft1em {
+  padding-left: 1em;
  }
 
 
@@ -117,6 +129,10 @@ html {
 
  .martop1 {
   margin-top: 1rem;
+ }
+
+  .martop5 {
+  margin-top: 5rem;
  }
 
   .marleft2 {
@@ -206,6 +222,8 @@ html {
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+
   }
 
   a {text-decoration: none;}
@@ -248,9 +266,14 @@ html {
           @extend %bor-rad-50;
           padding: 1em 1.2em;
         }
+
+        &--corner05 {
+          @extend %borrad05;
+          padding: 1em 1.2em; 
+        }
   }
 
-  .nav__item, .footer__address {
+  .nav__item, .footer__address, .footer__text {
     @extend %transition;
     font-size: $font-size-base;
     font-weight: 600;
@@ -443,8 +466,39 @@ html {
       }
   width: 32rem;  
   outline: none;
-  border: none;  
+  border: none;
+
+        &--sm {
+          @extend %font-base-second;
+          width: 25rem;
+        }  
+
+        &--white {
+          color: #fff;
+        }
+
+        &--transp01 {
+          background: rgba(247,247,247,0.1);
+        }
 } 
+
+
+.input__placehold--white::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.input__placehold--white::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+.input__placehold--white:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+.input__placehold--white:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+
+
+
 
 .input__placehold:focus + .icon--envel {
   @extend %transition;
@@ -488,4 +542,13 @@ html {
    &--grey {
     color: #a3a3a3;
    }
+}
+
+
+//--------forest -----------//
+
+.forest-bg {
+  background: url(../img/forest-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -407,16 +407,19 @@ th {
   widows: 94rem;
   margin: 0 auto; }
 
-.gray, .nav__item, .footer__address, .item__link, .footer__support, .btn, .input__placehold:focus + .icon--envel {
+.gray, .nav__item, .footer__address, .footer__text, .item__link, .footer__support, .btn, .input__placehold:focus + .icon--envel {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear; }
 
-.input__placehold {
+.icon--corner05, .input__placehold {
   border-radius: 0.5rem; }
 
 .footer__descr, .footer__support, .form__p, .input__placehold, .copiright__text {
   font-size: 1.6rem; }
+
+.input__placehold--sm {
+  font-size: 1.4rem; }
 
 .icon--round {
   border-radius: 50%; }
@@ -1960,6 +1963,9 @@ html {
   font-size: 62.5%;
   font-family: "Cabin", sans-serif; }
 
+.uppercase {
+  text-transform: uppercase; }
+
 .footer-bg {
   background: #f2f5f8; }
 
@@ -1979,11 +1985,14 @@ html {
   padding-top: 1rem;
   padding-bottom: 4rem; }
 
+.padtop35bot25 {
+  padding: 3.5rem 0 2.5rem 0; }
+
 .padtop5bot45 {
   padding: 5rem 0 4.5rem 0; }
 
-.padtop35bot25 {
-  padding: 3.5rem 0 2.5rem 0; }
+.padtop8bot4 {
+  padding: 8rem 0 4rem 0; }
 
 .pad0405 {
   padding: 0.6em 0.9em; }
@@ -1994,6 +2003,7 @@ html {
 
 .pad-bl-1-b {
   display: block;
+  padding-top: 0;
   padding-bottom: 1em; }
 
 .pad-bl-t1-b05 {
@@ -2004,6 +2014,9 @@ html {
 .pad-bl-050 {
   display: block;
   padding: 0.5em 0; }
+
+.padleft1em {
+  padding-left: 1em; }
 
 .padleft4 {
   padding-left: 4rem; }
@@ -2020,6 +2033,9 @@ html {
 
 .martop1 {
   margin-top: 1rem; }
+
+.martop5 {
+  margin-top: 5rem; }
 
 .marleft2 {
   margin-left: 2rem; }
@@ -2101,7 +2117,8 @@ html {
 
 ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 a {
   text-decoration: none; }
@@ -2109,7 +2126,7 @@ a {
 .contact__item {
   padding: 10px; }
 
-.borrad05, .input__placehold {
+.borrad05, .icon--corner05, .input__placehold {
   border-radius: 0.5rem; }
 
 .flex-ai-c {
@@ -2141,11 +2158,13 @@ a {
     padding-right: 1rem; }
   .icon--round {
     padding: 1em 1.2em; }
+  .icon--corner05 {
+    padding: 1em 1.2em; }
 
-.nav__item, .footer__address {
+.nav__item, .footer__address, .footer__text {
   font-size: 1.6rem;
   font-weight: 600; }
-  .nav__item--regul, .footer__address--regul {
+  .nav__item--regul, .footer__address--regul, .footer__text--regul {
     font-weight: 400; }
 
 .item__link:hover {
@@ -2252,6 +2271,28 @@ a {
   width: 32rem;
   outline: none;
   border: none; }
+  .input__placehold--sm {
+    width: 25rem; }
+  .input__placehold--white {
+    color: #fff; }
+  .input__placehold--transp01 {
+    background: rgba(247, 247, 247, 0.1); }
+
+.input__placehold--white::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+.input__placehold--white::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+.input__placehold--white:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff; }
+
+.input__placehold--white:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
 
 .input__placehold:focus + .icon--envel {
   color: #65abd0; }
@@ -2275,5 +2316,10 @@ a {
 
 .copiright__text--grey {
   color: #a3a3a3; }
+
+.forest-bg {
+  background: url(../img/forest-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */
