@@ -30,6 +30,10 @@ html {
 .uppercase {
   text-transform: uppercase;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
  
 
  .footer-bg {
@@ -42,6 +46,12 @@ html {
 
  .container {
    @extend %container; 
+ }
+
+ .pad-top75bot1rem {
+  padding-top: 7.5rem;
+  padding-bottom: 1rem; 
+
  }
 
  .pad-top-bot35 {
@@ -71,8 +81,16 @@ html {
   padding: 5rem 0 4.5rem 0;
  }
 
+  .padtop6bot35 {
+  padding: 6rem 0 3.5rem 0;
+ }
+
  .padtop8bot4 {
   padding: 8rem 0 4rem 0;
+ }
+
+ .pad2-25rem {
+  padding: 2rem 2.5rem;
  }
 
  .pad0405 {
@@ -117,13 +135,17 @@ html {
 
  .padleft-right15 {
    padding: {
-    left: 1.5em;
-    right: 1.5em;
+   left: 1.5em;
+   right: 1.5em;
    }
  }
 
 
-  .martop0 {
+.mar0 {
+  margin: 0;
+}
+
+ .martop0 {
   margin-top: 0;
 }
 
@@ -171,6 +193,10 @@ html {
   margin-bottom: 0;
 }
 
+ .marbot35 {
+  margin-bottom: 3.5rem;
+ } 
+
  .marbot5 {
   margin-bottom: 5rem;
  }
@@ -181,6 +207,13 @@ html {
         background: $dark;
       }
 
+ }
+
+ .green {
+  color: $valid;
+      &--bg {
+        background: $valid;
+      }
  }
 
  .yellow {
@@ -200,11 +233,19 @@ html {
 
  .white {
   color: #fff;
+      &--opacity05{
+        opacity: 0.5;
+      }
  }
 
 .flex-just-center, %flex-just-center {
   display: flex;
   justify-content: center;
+}
+
+.flex-just-end, %flex-just-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
@@ -239,9 +280,14 @@ html {
 
 
 
-  .flex-ai-c {
+  .flex-ai-c, %flex-ai-c {
     display: flex;
     align-items: center;
+  }
+
+  .flex-ai-c-just-betw {
+    @extend %flex-ai-c;
+    justify-content: space-between;
   }
 
   .flex {
@@ -257,6 +303,10 @@ html {
     font-size: 1.6rem;
     padding: 0.5em;
 
+        &--sm {
+          font-size: $font-size-secondary;
+        }
+
         &--vert-align {
           vertical-align: middle;
           padding-right: 1rem;
@@ -269,6 +319,7 @@ html {
 
         &--corner05 {
           @extend %borrad05;
+          border: 0;
           padding: 1em 1.2em; 
         }
   }
@@ -404,6 +455,10 @@ html {
   cursor: pointer;
   border: none;
   outline: none;
+
+      &--square {
+        padding: 1.3em 1.2em;
+      }
 }
 
 .btn-sm {
@@ -460,6 +515,7 @@ html {
 .input__placehold {
   @extend %font-base;
   @extend %borrad05;
+  font-weight: bold;
       padding: {
         top:1em;
         bottom:1em;     
@@ -473,13 +529,24 @@ html {
           width: 25rem;
         }  
 
+        &--xs {
+          @extend %font-base-second;
+          width: 20rem;
+        }  
+
         &--white {
           color: #fff;
+        }
+
+         &--dark {
+          color: $dark;
         }
 
         &--transp01 {
           background: rgba(247,247,247,0.1);
         }
+
+
 } 
 
 
@@ -494,6 +561,36 @@ html {
 }
 .input__placehold--white:-moz-placeholder { /* Firefox 18- */
   color: #fff;
+}
+
+
+
+.input__placehold--dark::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $dark;
+}
+.input__placehold--dark::-moz-placeholder { /* Firefox 19+ */
+  color: $dark;
+}
+.input__placehold--dark:-ms-input-placeholder { /* IE 10+ */
+  color: $dark;
+}
+.input__placehold--dark:-moz-placeholder { /* Firefox 18- */
+  color: $dark;
+}
+
+
+
+.input__placehold--default::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $default;
+}
+.input__placehold--default::-moz-placeholder { /* Firefox 19+ */
+  color: $default;
+}
+.input__placehold--default:-ms-input-placeholder { /* IE 10+ */
+  color: $default;
+}
+.input__placehold--default:-moz-placeholder { /* Firefox 18- */
+  color: $default;
 }
 
 
@@ -551,4 +648,44 @@ html {
   background: url(../img/forest-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.relative {
+  position: relative;
+}
+
+.badge {
+  @extend %font-base-second;
+  position: absolute;
+  top: 0;
+  right: -5rem;
+  background: $alarm;
+  font-weight: bold;
+}
+
+
+//-----------best app ever----------------//
+
+
+.text-align-center {
+  text-align: center;
+}
+
+.footer__heading {
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  margin: 0;
+  padding: {
+    top: 0.5em;
+    bottom: 0.5em;
+  }
+}
+
+.bord-1px-gray {
+  border: 2px solid $disabled;
+}
+
+.footer__form {
+
+  background: $footer-bg;
 }

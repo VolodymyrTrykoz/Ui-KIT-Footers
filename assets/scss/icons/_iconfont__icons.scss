@@ -17,6 +17,11 @@ $global-font-icon: 'social';
     /* Some common icon stuff */
   }
 
+  &.icon--arrow-right {
+    &:before {
+      content: $icon-arrow-right;
+    }
+  }
   &.icon--drbbbl {
     &:before {
       content: $icon-drbbbl;
