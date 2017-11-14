@@ -2243,7 +2243,7 @@ a {
   .btn--scl:hover {
     opacity: 0.8; }
 
-.footer__heading {
+.footer__heading-sm {
   margin-top: 0;
   font-size: 2.4rem;
   font-weight: 500; }
